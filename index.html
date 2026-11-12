@@ -154,6 +154,7 @@ section{margin-top:44px}
 .tag.capsule{background:var(--coral-soft)}
 .tag.walk{background:var(--paper)}
 .tag.taxi{background:var(--yellow-soft)}
+.tag.train{background:var(--sky-soft)}
 .maplink{display:inline-block;margin-top:8px;margin-right:14px;font-size:13px;text-decoration:none;border-bottom:2px solid var(--ink)}
 .warn{margin-top:8px;font-size:13px;padding:4px 10px;border-radius:var(--r-sm);background:var(--sky-soft);border:2px solid var(--ink)}
 
@@ -423,7 +424,8 @@ footer svg{width:70px;margin:0 auto 6px}
     walk:'<svg viewBox="0 0 16 16"><circle cx="9" cy="3" r="1.8" fill="#3E3A39"/><path d="M8 6l-2 4 3 1 1 4M8 6l3 3M7 10l-2 5" stroke="#3E3A39" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>',
     taxi:'<svg viewBox="0 0 16 16"><path d="M2 11V8l2-3h8l2 3v3z" fill="#FFFCF6" stroke="#3E3A39" stroke-width="1.6" stroke-linejoin="round"/><circle cx="5" cy="12" r="1.4" fill="#3E3A39"/><circle cx="11" cy="12" r="1.4" fill="#3E3A39"/></svg>'
   };
-  var TAGNAME = {plane:'飛機',metro:'地鐵',bus:'公車',cable:'纜車',capsule:'膠囊列車',walk:'步行',taxi:'計程車'};
+  ICON.train = '<svg viewBox="0 0 16 16"><rect x="2" y="4" width="12" height="8" rx="2.5" fill="#FFFCF6" stroke="#3E3A39" stroke-width="1.6"/><path d="M2 8h12M6 4v4M10 4v4M1 14h14" stroke="#3E3A39" stroke-width="1.6" stroke-linecap="round"/></svg>';
+  var TAGNAME = {plane:'飛機',metro:'地鐵',bus:'公車',cable:'纜車',capsule:'膠囊列車',train:'海岸列車',walk:'步行',taxi:'計程車'};
 
   /* ---------- day illustrations ---------- */
   var S = 'stroke="#3E3A39" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"';
@@ -463,6 +465,7 @@ footer svg{width:70px;margin:0 auto 6px}
         {t:'下午', h:'BRONI 咖啡店', map:'https://naver.me/xprAn4op'},
         {t:'下午', h:'青沙浦 韓版灌籃高手平交道', tags:['walk'], must:true, p:'Haeundae Cheongsapo Photo Spot。', map:'https://naver.me/xk9EXmio'},
         {t:'有空', h:'青沙浦天空步道', tags:['walk'], opt:true, p:'有空閒再前往。', map:'청사포다릿돌전망대'},
+        {t:'傍晚', h:'搭海岸列車回尾浦', tags:['train'], p:'從青沙浦站搭藍線公園海岸列車回到尾浦站。', map:'해운대블루라인파크 청사포정거장'},
         {t:'晚餐', h:'삼환축산 중동점 吃韓牛', tags:['taxi'], map:'삼환축산 중동점'},
         {t:'19:00', h:'廣安里 M 無人機燈光秀', tags:['metro'], must:true,
           p:'19:00 或 21:00 場次擇一。', warn:'吹海風會冷，記得帶圍巾和手套。', map:'광안리해수욕장'},
@@ -472,7 +475,7 @@ footer svg{width:70px;margin:0 auto 6px}
     {
       title:'南浦逛街採買，晚上回家', sub:'下午留意時間，17:50 前要搭上地鐵',
       items:[
-        {t:'09:00', h:'dday 南浦店 醫美', tags:['walk'], must:true, p:'早上第一件事，退房後再出門也可以。', map:'https://naver.me/5BcR05t3'},
+        {t:'10:30', h:'dday 南浦店 醫美', tags:['walk'], must:true, p:'早上第一件事，退房後再出門也可以。', map:'https://naver.me/5BcR05t3'},
         {t:'午餐', h:'大屋醬蟹', tags:['walk'], map:'https://naver.me/GfCsiDBY'},
         {t:'午後', h:'札嘎其市場', tags:['walk'], p:'海鮮市場散步。', map:'https://naver.me/xBwJzsdQ'},
         {t:'午後', h:'Olive Young 光復 Town', tags:['walk'], map:'올리브영 광복타운'},
@@ -553,7 +556,7 @@ footer svg{width:70px;margin:0 auto 6px}
     todo:[
       {g:'預約與確認'},
       {id:'t1', x:'確認膠囊列車預約 15:00–15:30', s:'尾浦站出發'},
-      {id:'t2', x:'確認 dday 南浦店 12／13 09:00 醫美預約'},
+      {id:'t2', x:'確認 dday 南浦店 12／13 10:30 醫美預約'},
       {id:'t3', x:'決定無人機秀看 19:00 還是 21:00 場'},
       {id:'t4', x:'查好 삼환축산 중동점 營業時間，必要時訂位'},
       {g:'當天提醒'},
